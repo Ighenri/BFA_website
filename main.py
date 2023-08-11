@@ -15,7 +15,7 @@ collection = db['form_submissions']
 app = Flask(__name__)
 
 
-@app.route('/')
+@app.route('/Home')
 def Home():
     return render_template("index2.html")
 
@@ -142,7 +142,7 @@ def send_email():
                                   image_path)
 
             print(total_registers)
-            return f'total submissions of from  = {total_registers} \n \n Email sent successfully!'
+            return render_template("registration-form2.html")
 
         else:
             return 'No receiver email provided'
