@@ -64,7 +64,7 @@ def submit_form():
     return redirect(url_for('send_email', receiver_email=Email, register_name=name, total_registers=str(total_count)))
 
 
-def send_email_with_image(sender_email, register_name, sender_password, receiver_email, subject, message, image_path):
+def send_email_with_image(sender_email, register_name, sender_password, receiver_email, subject, paragraphs, image_path):
     # Create a multipart message container
     msg = MIMEMultipart()
     msg['From'] = sender_email
@@ -73,14 +73,14 @@ def send_email_with_image(sender_email, register_name, sender_password, receiver
 
     # Create the HTML content of the email
     html = f'''
-    <html>
-        <body>
-            <p>Dear {register_name},</p>
-            <p><img src="cid:image"></p>
-            <p>{message}</p>
-        </body>
-    </html>
-    '''
+       <html>
+           <body>
+               <p>Dear {register_name},</p>
+               <p><img src="cid:image"></p>
+               {''.join(f"<p>{p}</p>" for p in paragraphs)}
+           </body>
+       </html>
+       '''
 
     # Attach the HTML content to the email
     msg.attach(MIMEText(html, 'html'))
@@ -111,26 +111,35 @@ def send_email_with_image(sender_email, register_name, sender_password, receiver
     server.quit()
 
 
+def read_message(file_path, register_name):
+    with open(file_path, 'r') as email_text:
+        message = email_text.read()
+        message = message.replace("[Name]", register_name)
+        paragraphs = message.split('\n\n')  # Assuming paragraphs are separated by two newline characters
+    return paragraphs
+
+
 @app.route('/send_email', methods=['GET'])
 def send_email():
 
     if request.method == 'GET':
+
         receiver_email = request.args.get('receiver_email')
         total_registers = request.args.get("total_registers")
         register_name = request.args.get("register_name")
         print(receiver_email)
+
         if receiver_email:
+
             sender_email = 'kristaspace0@gmail.com'
             sender_password = 'pkhmlmmqhpcwjhob'
             subject = 'Congratulations! Your Golden Ticket for "The Next Big Thing" Blockchain Event.'
             image_path = 'krTicket1-2.jpg'
             file_path = "Email_text.txt"
-            with open(file_path) as email_text:
-                message = email_text.read()
-                message = message.replace("[Name]", register_name)
 
-            send_email_with_image( sender_email, register_name, sender_password, receiver_email, subject,
-                                   message, image_path)
+            paragraphs = read_message(file_path, register_name)
+            send_email_with_image(sender_email, register_name, sender_password, receiver_email, subject, paragraphs,
+                                  image_path)
 
             print(total_registers)
             return f'total submissions of from  = {total_registers} \n \n Email sent successfully!'
