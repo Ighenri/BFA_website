@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+     <meta name="author" content="Blochchain For All" />
+    <meta name="copyright" content="2023 Blochchain For All" />
+    <link rel="stylesheet" href="../static/output.css" />
+    <link rel="stylesheet" href="../static/landingpage.css" />
+    <link rel="icon" type="image/png" href="../static/Images/sponsors/bfalOGOch1.svg" />
+
+    <title>Blochchain For All</title>
+  </head>
+  <body class="bfa-body grid grid-cols-1">
+    <div class="bfa-image absolute top-0 right-0 left-0 -z-50"></div>
+    <div class="absolute -top-10 lg:-top-12 left-0  grid justify-center min-h-screen w-screen">
+      <img
+      id="flashy-img"
+      src="../static/IMAGES/bfa-svg/krProgfLr1-11 1.svg"
+      alt=""
+      class=" h-screen scale-125 sm:scale-100 flashy transformRight"
+    />
+    <h3 id="flashy-header" class="text-4xl sm:text-5xl md:text-7xl text-white absolute w-full text-center flashy">
+        THE NEXT <span class="font-bold">BIG THING</span>
+      </h3> 
+    </div>
+    <header class="w-screen z-50 fixed -top-5 flex items-center">
+      <nav
+        class="main-nav text-white flex justify-between items-center w-4.5/5 mx-auto h-fit"
+      >
+        <a class="nav-logo w-32 md:w-28 lg:w-32 " href="#"
+          ><img
+            class="w-full h-full"
+            src="../static/Images/sponsors/bfalOGOch1.svg"
+            alt=""
+          />
+        </a>
+        <div class="navlinks flex absolute flex-col lg:flex-row text-center lg:justify-between lg:static top-24 right-0 w-3.5/5 sm:w-2.5/5 lg:w-3.5/5 lg:items-center bg-black lg:bg-transparent opacity-0 lg:opacity-100 invisible lg:visible h-0 lg:h-fit">
+          <ul
+            class="bfa-nav-list flex flex-col lg:flex-row lg:justify-around lg:items-center w-full lg:w-5/6 text-white mr-10"
+          >
+            <li class="my-5 list">
+              <a href="index.html">HOME</a>
+            </li>
+            <li class="my-5 list">
+              <a href="#about">ABOUT US</a>
+            </li>
+            <li class="my-5 list">
+              <a href="#ourteam">TEAM MEMBERS</a>
+            </li>
+            <li class="my-5 list">
+              <a href="#schedule">SCHEDULE</a>
+            </li>
+            <li class="my-2 py-2 lg:py-2 lg:px-10 text-base font-medium rounded-full text-white registerBtn w-4/5 lg:w-fit mx-auto lg:mx-0">
+              <a href="#register" class="">REGISTER</a>
+            </li> 
+          </ul>
+            
+        </div>
+        <div class="hamburger block lg:hidden mobile-view-btn">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+      </nav>
+    </header>
+    <main class="">
+      <!-- hero section -->
+      <section class="relative event-info flex flex-col justify-evenly items-center w-screen md:w-4/5 mx-auto">
+          <p class="text-xs sm:text-lg text-white">
+            COMING SOON TO EPE LAGOS
+          </p>
+            <div class="time grid grid-cols-4 my-5 text-center w-full">
+              <div>
+                <div class="w-4/5 sm:w-2.5/5 md:w-3/5 lg:w-2/5">
+                  <span id="day0" class="w-8 md:w-10 text-6xl md:text-7xl text-center grid place-items-center">0</span>
+                  <span id="day1" class="w-8 md:w-10 text-6xl md:text-7xl text-center place-items-center">0</span>
+                </div>
+                <p>DAYS</p>
+              </div>
+              <div>
+                <div class="w-4/5 sm:w-2.5/5 md:w-3/5 lg:w-2/5"><span id="hour0" class="w-8 md:w-10 text-6xl md:text-7xl text-center place-items-center">0</span><span id="hour1" class="w-8 md:w-10 text-6xl md:text-7xl text-center place-items-center">0</span></div>
+                <p>HOURS</p>
+              </div>
+              <div>
+                <div class="w-4/5 sm:w-2.5/5 md:w-3/5 lg:w-2/5">
+                  <span id="minute0" class="w-8 md:w-10 text-6xl md:text-7xl text-center place-items-center">0</span><span id="minute1" class="w-8 md:w-10 text-6xl md:text-7xl text-center place-items-center">0</span>
+                </div>
+                <p>MINUTES</p>
+              </div>
+              <div>
+                <div class="w-4/5 sm:w-2.5/5 md:w-3/5 lg:w-2/5">
+                  <span id="seconds0" class="w-8 md:w-10 text-6xl md:text-7xl text-center place-items-center">0</span><span id="seconds1" class="w-8 md:w-10 text-6xl md:text-7xl text-center place-items-center">0</span>
+                </div>
+                <p>SECONDS</p>
+              </div>
+          </div>
+          <div class="grid justify-center items-center">
+              <a href="{{ url_for('registration_form') }}" class="registerBtn text-white font-medium py-3 px-10 text-lg rounded-full">
+                BOOK YOUR SEAT NOW</a>
+          </div>
+      </section>
+      
+      <!-- ABOUT SECTION -->
+      <section class="bg-black grid place-items-center mt-10" id="about">
+        <div class="grid gap-8 py-8 w-4/5 text-white mx-auto md:w-8/12">
+          <div class="about-bfa text-center">
+            <h3 class="header-texts text-xl font-bold mb-3">OVERVIEW</h3>
+            <p class="text-2xl">
+              Blockchain For All is an innitiative of Krista Space with the goal of bringing
+              blockchain and cryptocurrency education to individuals and
+              untapped regions.
+            </p>
+          </div>
+          <hr />
+          <div class="text-center">
+            <h3 class="header-texts text-xl font-bold mb-3">OUR OBJECTIVE</h3>
+            <p>
+              Our goal is to inform, empower, onboard individuals to develop
+              sustainable solutions to maximize their potentials by utilizing
+              blockchain technology. Through our events and strategic actions.
+            </p>
+          </div>
+          <hr />
+          <div class="text-center">
+            <h3 class="text-[#ea7020] text-xl font-bold mb-3">
+              VISION AND MISSION
+            </h3>
+            <p>
+              Our mission is to become a global project that reaches
+              underepresented regions and communities. We want to create
+              opportunities for individuals to learn, grow and contribute to the
+              blockchain industry.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- TEAMS SECTION -->
+      <section class="grid place-items-center mt-20 mb-10" id="ourteam">
+        <h1 class="header-texts font-bold mb-10 text-3xl">
+          MEET THE TEAM
+        </h1>
+        <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-3 items-center w-4/5 mx-auto text-white">
+          <div class="team relative h-96">
+            <div class="team-pic bg-center bg-no-repeat  bg-[url(./Images/Teams/jesse.jpg)]"></div>
+            <div class="absolute bottom-5 left-5">
+              <h3 class="font-bold tracking-wider">JESSE GIDEON</h3>
+              <p>Covener and President, BFA</p>
+            </div>
+          </div>
+          <div class="team relative h-96" >
+            <div class="team-pic bg-center bg-no-repeat  bg-[url(./Images/Teams/anita.jpg)]"></div>
+            <div class="absolute bottom-5 left-5">
+              <h3 class="font-bold tracking-wider">ANITA DARLINGTON</h3>
+              <p>Vice-President, BFA</p>
+            </div>
+          </div>
+          <div class="team relative h-96" >
+            <div class="team-pic bg-center bg-no-repeat bg-[url(./Images/Teams/chiamaka.svg)]"></div>
+            <div class="absolute bottom-5 left-5">
+              <h3 class="font-bold tracking-wider">CHIAMAKA JOYCE</h3>
+              <p>Director of partnership and sponsorship</p>
+            </div>
+          </div>
+          <div class="team relative h-96" >
+            <div class="team-pic bg-center bg-no-repeat bg-[url(./Images/Teams/joshuaU.svg)]"></div>
+            <div class="absolute bottom-5 left-5">
+              <h3 class="font-bold tracking-wider">JOSHUA UMOH</h3>
+              <p>Director of programs</p>
+            </div>
+          </div>
+          <div class="team relative h-96" >
+            <div class="team-pic bg-center bg-no-repeat bg-[url(./Images/Teams/Bobcharles.svg)]"></div>
+            <div class="absolute bottom-5 left-5">
+              <h3 class="font-bold tracking-wider">BOB CHARLES NGENE</h3>
+              <p>Director of marketing</p>
+            </div>
+          </div>
+          <div class="team relative h-96" >
+            <div class="team-pic bg-center bg-no-repeat bg-[url(./Images/Teams/greatworth.jpeg)]"></div>
+            <div class="absolute bottom-5 left-5">
+              <h3 class="font-bold tracking-wider">GREATWORTH PRINCE</h3>
+              <p>Creative director</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Events schedule -->
+      <section class="text-white w-4/5 mx-auto sm:w-8/12 mt-20" id="schedule">
+        <div class="text-center ">
+          <h2 class="text-3xl font-bold header-texts z-[-1]">EVENT SCHEDULE</h2>
+        <div class="text-center mt-8 font-bold ">August 19th, 2023.</div>
+        <p class="anticipate my-10 text-5xl ">COMING SOON!</p>
+        </div>
+        
+      </section>
+      <!-- Footer section -->
+      <footer class=" w-4/5 mx-auto sm:w-8/12 text-white grid grid-cols-1 mt-10 gap-5">
+          <h3 class=" text-xl font-bold mb-4 text-center">You're just a few steps away from recieving your golden ticket to access the event.</h3>
+            <a href="{{ url_for('registration_form') }}" class="z-0 bg-orange-500 text-gray-100 rounded-md text-center text-sm sm:text-base p-2 shadow-lg"
+               id="register" data-modal-target="defaultModal" data-modal-toggle="defaultModal">Book Your Seat</a>
+          <a class="mx-auto my-10" href="mailto:kristaspace1@gmail.com">For further inquiry: kristaspace1@gmail.com</a>
+      </footer>
+    </main>
+    <script src="./script.js"></script>
+  </body>
+</html>

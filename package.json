@@ -1,0 +1,16 @@
+{
+  "name": "bfa_project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "tailwind.config.js",
+  "scripts": {
+    "tailwind": "npx tailwindcss -i ./src/input.css -o ./BFA_LANDINGPAGE/output.css --watch",
+    "prettier": "npx prettier --write ./BFA_LANDINGPAGE/*.html"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "prettier-plugin-tailwindcss": "^0.3.0"
+  }
+}

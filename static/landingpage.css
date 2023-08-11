@@ -1,0 +1,237 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700&display=swap");
+@font-face {
+  font-family: digitalfont;
+  src: url(./font/digital-7.ttf);
+}
+
+* {
+  font-family: Poppins, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+.bfa-body {
+  background-color: #000000;
+  overflow-x: hidden;
+}
+
+body.hide {
+  overflow: hidden;
+}
+
+/* NAVIGATION HEADER */
+
+.bfa-image {
+  background-image: url(./IMAGES/bfa-svg/krista\ 1.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  z-index: -100;
+}
+.bfa-nav-list li {
+  font-weight: 500;
+  transition: 0.5s all ease;
+}
+
+.bfa-nav-list .list:hover {
+  background-image: linear-gradient(109.64deg, #fdb812 -62.84%, #e55c24 63.15%);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  transform: scale(1.1);
+}
+
+.registerBtn {
+  background: linear-gradient(109.64deg, #fdb812 -62.84%, #e55c24 63.15%);
+  transition: all 0.3s ease-in-out;
+}
+.registerBtn:hover {
+  transform: scale(1.05);
+}
+.time div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.time > div > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.time span {
+  background: linear-gradient(
+    180deg,
+    #ffffff 0%,
+    rgba(255, 255, 255, 0.1) 100%
+  );
+  opacity: 0.5;
+  border: 1px solid #ffffff;
+  -webkit-backdrop-filter: blur(32.5px);
+  border-radius: 5px;
+  font-family: digitalfont, sans-serif;
+}
+.time div p {
+  color: white;
+  font-size: 14px;
+}
+.event-info {
+  background-color: transparent;
+  margin-top: 60vh;
+  padding-bottom: 40px;
+}
+#flashy-header {
+  text-shadow: 0 0 80px rgb(192 219 255/ 75%), 0 0 32px rgb(65 120 255/ 24%);
+  top: 45vh;
+}
+.flashy {
+  opacity: 0;
+}
+.flashy.transformRight {
+  animation: transformRight 10s ease infinite;
+}
+@keyframes transformRight {
+  30% {
+    opacity: 1;
+  }
+  40%,
+  80% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(150%);
+  }
+}
+
+.flashy.transformLeft {
+  animation: transformLeft 10s ease infinite;
+}
+@keyframes transformLeft {
+  0% {
+    transform: scale(1.5);
+  }
+  30% {
+    opacity: 1;
+  }
+  40%,
+  80% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-150%);
+    transform: scale(1.5);
+  }
+}
+.hamburger {
+  cursor: pointer;
+}
+.bar {
+  width: 30px;
+  height: 5px;
+  margin-bottom: 5px;
+  background: white;
+}
+.navlinks {
+  transition: all 0.5s ease;
+}
+.navlinks.active {
+  opacity: 1;
+  height: 100vh;
+  visibility: visible;
+}
+.team {
+  width: 1fr;
+  border-top-left-radius: 70px;
+  border-bottom-right-radius: 70px;
+  font-family: Nunito, sans-serif;
+  transition: all 0.5s linear;
+  position: relative;
+  overflow: hidden;
+}
+.team-pic {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+  transition: all 1s ease;
+  background-size: cover;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.301);
+  background-blend-mode: multiply;
+}
+
+.team:hover .team-pic,
+.team:focus .team-pic {
+  transform: scale(1.1);
+  background-blend-mode: normal;
+}
+.header-texts {
+  background: linear-gradient(
+    180deg,
+    #ef831d 0%,
+    #e55c24 104.53%,
+    rgba(255, 255, 255, 0) 104.55%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+.event-schedule > div {
+  background: #2d3640;
+  padding: 20px;
+}
+.anticipate {
+  animation: flip 7s linear infinite;
+}
+@keyframes flip {
+  0% {
+    transform: rotateX(0deg);
+  }
+  25% {
+    transform: rotateX(180deg);
+  }
+  50% {
+    transform: rotateX(0deg);
+  }
+  75% {
+    transform: rotateY(90deg);
+  }
+  90%,
+  100% {
+    transform: rotateX(0deg);
+  }
+}
+
+footer {
+  padding: 5rem 0px;
+}
+
+.shiny {
+  text-shadow: 0 0 80px rgb(192 219 255/ 75%), 0 0 32px rgb(65 120 255/ 24%);
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  transition: all 5000s ease-in-out 0s;
+  -webkit-transition: all 5000s ease-in-out 0s;
+  transition-property: background-color, color;
+  -webkit-transition-property: background-color, color;
+}
