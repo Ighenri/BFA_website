@@ -142,7 +142,7 @@ def send_email():
                                   image_path)
 
             print(total_registers)
-            return render_template("registration-form2.html")
+            return render_template("index2.html")
 
         else:
             return 'No receiver email provided'
