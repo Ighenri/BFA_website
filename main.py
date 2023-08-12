@@ -150,5 +150,15 @@ def send_email():
         return 'Send Email Page'
 
 
+@app.route('/')
+def root():
+    return redirect(url_for('Home'))
+
+# Add a catch-all route for handling URL not found errors
+@app.errorhandler(404)
+def page_not_found(e):
+    return "Page not found. Please check the URL.", 404
+
+
 if __name__ == "__main__":
     app.run(debug=True)
