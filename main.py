@@ -5,9 +5,10 @@ from email.mime.image import MIMEImage
 from flask import Flask, render_template, request,  redirect, url_for
 from pymongo import MongoClient
 
-client = MongoClient("mongodb+srv://wolfgang:wolfgang@cluster0.06gzzsk.mongodb.net/?retryWrites=true&w=majority")
-db = client['krista_data']
-collection = db['form_data']
+client = MongoClient(
+   'mongodb+srv://kristaspace0:ibrgvDzwRm3kD7XW@form-database.eovrsov.mongodb.net/?retryWrites=true&w=majority')
+db = client['form_database']
+collection = db['form_submissions']
 
 
 
@@ -74,7 +75,8 @@ def send_email_with_image(sender_email, register_name, sender_password, receiver
     html = f'''
        <html>
            <body>
-               <p>Dear {register_name},</p>
+               <p>Congratulations on receiving your golden ticket for 
+               "The Next Big Thing" blockchain event in Africa! Organized by BFA</p>
                <p><img src="cid:image"></p>
                {''.join(f"<p>{p}</p>" for p in paragraphs)}
            </body>
@@ -142,7 +144,25 @@ def send_email():
 
             print(total_registers)
             print("email sent")
-            return
+            return  f'''
+                       <html>
+                            <head> 
+                            <link rel="stylesheet" href="../static/output.css"> 
+                            <link rel="stylesheet" href="../static/landingpage.css">
+                            <title>Blockchain For All</title>
+                            <link rel="icon" type="image/png" href="../static/Images/sponsors/bfalOGOch1.svg" />
+                            </head>
+                           <body>
+                                <div class="bg-black my-auto w-screen h-screen grid grid-cols-1 place-items-center">
+                                <div class="grid grid-cols-1 place-items-center gap-10 w-[80%] text-center">
+                                <h1 class="text-3xl sm:text-5xl text-white text-center shiny ">CONGRATULATIONS!!! YOU HAVE <span class="font-bold">FINALLY RESERVED YOUR SEAT FOR THE NEXT BIG THING</span></h1>
+                                  <p class="text-white text-xl">Kindly check your email for your e-ticket</p>
+                                  <a href= "/" class="inline-block px-10 py-2.5 rounded-full text-white registerBtn h-[600px] w-[70%] hover:font-bold">DISMISS MESSAGE</a>
+                                </div>
+                                </div>
+                           </body>
+                       </html>
+                       '''
 
         else:
             return 'No receiver email provided'
