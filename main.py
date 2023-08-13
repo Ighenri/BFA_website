@@ -5,10 +5,9 @@ from email.mime.image import MIMEImage
 from flask import Flask, render_template, request,  redirect, url_for
 from pymongo import MongoClient
 
-client = MongoClient(
-    'mongodb+srv://kristaspace0:ibrgvDzwRm3kD7XW@form-database.eovrsov.mongodb.net/?retryWrites=true&w=majority')
-db = client['form_database']
-collection = db['form_submissions']
+client = MongoClient("mongodb+srv://wolfgang:wolfgang@cluster0.06gzzsk.mongodb.net/?retryWrites=true&w=majority")
+db = client['krista_data']
+collection = db['form_data']
 
 
 
@@ -142,7 +141,8 @@ def send_email():
                                   image_path)
 
             print(total_registers)
-            return render_template("index2.html")
+            print("email sent")
+            return
 
         else:
             return 'No receiver email provided'
