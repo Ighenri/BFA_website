@@ -357,22 +357,27 @@
             <label for="skill-choice" class="mr-2">Skill of Choice</label>
             <select name="skill-of-choice" id="skill-choice" class="w-full sm:w-[50%]
              text-center border-solid border-2 border-gray-500 rounded-md font-medium p-1 text-sm text-gray-500">
-              <option value="">Your skill preference</option>
-              <option value="Web Development">Web Development</option>
-              <option value="UI/UX">UI/UX</option>
-              <option value="Smart Contract Development ">Smart Contract Development </option>
-              <option value="Back End Development">Back End Development</option>
-              <option value="Canister Development">Canister Development</option>
-              <option value="Dapps Architecture and Scalability">Dapps Architecture and Scalability</option>
-              <option value="Deployment and Operations">Deployment and Operations</option>
-              <option value="Community Management">Community Management</option>
-              <option value="Content Management and Marketing">Content Management and Marketing</option>
-              <option value="Networking and Social Entrepreneurship">Networking and social entrepreneurship</option>
-              <option value="Marketing Management">Marketing Management</option>
-              <option value="Social Media Marketing">Social Media Marketing</option>
-              <option value="Project Management">Project Management</option>
-              <option value="Web Design">Web Design</option>
-              <option value="Graphic and Video Design">Graphic and Video Design</option>
+              <option value="">Please select your skill preference</option>
+              <optgroup label="TECHNICAL SKILL" class="font-bold mt-3 mb-3 border-solid border-b-black border-b-4">
+                <option value="UI/UX">UI/UX</option>
+                <option value="Web Development">Web Development</option>
+                <option value="BackEnd Development">Back End Development</option>
+                <option value="Canister Development">Canister Development</option>
+                <option value="Smart Contract Development">Smart Contract Development </option>
+                <option value="Dapps Architecture and Scalability">Dapps Architecture and Scalability</option> 
+              </optgroup>
+
+              <optgroup label="NON-TECHNICAL SKILL" class="font-bold mt-6 mb-3">
+                <option value="Networking and Social Entrepreneurship">Networking and social entrepreneurship</option>
+                <option value="Content Management and Marketing">Content Management and Marketing</option>
+                <option value="Deployment and Operations">Deployment and Operations</option>
+                <option value="Community Management">Community Management</option>
+                <option value="Marketing Management">Marketing Management</option>
+                <option value="Social Media Marketing">Social Media Marketing</option>
+                <option value="Project Management">Project Management</option>
+                <option value="Graphic and Video Design">Graphic and Video Design</option>
+                <option value="Web Design">Web Design</option>
+              </optgroup>
             </select>
           </div>
           <button type="submit" class="mt-5 text-white registerBtn font-medium rounded-lg text-sm w-full sm:w-full sm:mx-auto px-5 py-2.5 text-center ">Submit</button>
